@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - apsi-work-tracking-backed
+name: Build and deploy WAR app to Azure Web App - apsi-work-tracking-backend
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'apsi-work-tracking-backed'
+          app-name: 'apsi-work-tracking-backend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CE72E2401ADC476C9BC60E90158B2C19 }}
           package: '*.war'
