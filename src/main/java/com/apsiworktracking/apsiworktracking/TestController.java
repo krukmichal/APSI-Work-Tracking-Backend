@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="https://ambitious-pond-0cc25cb03.1.azurestaticapps.net")
 @RestController
 public class TestController
 {
