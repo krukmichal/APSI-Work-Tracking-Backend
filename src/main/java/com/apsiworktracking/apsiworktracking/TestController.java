@@ -1,22 +1,30 @@
 package com.apsiworktracking.apsiworktracking;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+@CrossOrigin(origins="http://localhost:3000")
 @RestController
 public class TestController
 {
+    public List<User> users = new ArrayList<>(Arrays.asList(
+            new User( "John", "123" ),
+            new User( "Mary", "456" ),
+            new User( "Peter", "789" )
+    ));
 
-    @GetMapping("/test")
-    public String test()
+    @GetMapping("/users")
+    public List<User> getAllUsers()
     {
-        return "Hello Github Action";
+        return users;
     }
 
-    @GetMapping("/test2/{first}/{second}")
-    public String test2(@PathVariable int first, @PathVariable int second)
+    @PostMapping("/users")
+    public void addUser(@RequestBody User user)
     {
-        return first + " + " + second + " = " + (first + second);
+        users.add(user);
     }
 }
