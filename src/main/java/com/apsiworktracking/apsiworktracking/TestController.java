@@ -27,4 +27,10 @@ public class TestController
     {
         users.add(user);
     }
+
+    @GetMapping("/test")
+    public String test()
+    {
+        return "New Commit";
+    }
 }
