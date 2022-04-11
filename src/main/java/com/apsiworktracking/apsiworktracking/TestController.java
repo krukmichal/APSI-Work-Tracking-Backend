@@ -31,6 +31,6 @@ public class TestController
     @GetMapping("/test")
     public String test()
     {
-        return "New Commit";
+        return "New Commit 2";
     }
 }
