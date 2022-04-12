@@ -22,13 +22,13 @@ public class PersonController
     }
 
     @GetMapping("/persons/{id}")
-    public Person getUser(@PathVariable("id") Long id)
+    public Person getPerson(@PathVariable("id") Long id)
     {
         return personService.getPerson(id);
     }
 
     @PostMapping("/persons")
-    public Person createUser(@RequestBody Person person)
+    public Person createPerson(@RequestBody Person person)
     {
         return personService.createPerson(person);
     }
